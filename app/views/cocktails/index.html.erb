@@ -11,17 +11,15 @@
   <div class="cards">
     <% @cocktails.each do |t| %>
       <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.squarespace-cdn.com/content/5402e23ce4b0a7034afad3a2/1606391904322-P19CDX8914JET0X3AZES/Sloe+Gin+Negroni+with+Orange+Garnish.jpg?content-type=image%2Fjpeg)">
-        <p> <%= link_to t.name, cocktail_path(t) %> </p>
+        <p> <%= link_to t.name.upcase, cocktail_path(t) %> </p>
       </div>
     <% end %>
   </div>
 
-  <button class="btn btn-primary">
-    <%= link_to new_cocktail_path do %>
-        <i class="fas fa-plus"></i> Add a new cocktail
-    <% end %>
-  </button>
-
-  <button class="btn btn-primary"> Press me
-  </button>
+  
+  <%= link_to new_cocktail_path do %>
+    <div class="btn my-5" id="special-btn">
+      <i class="fas fa-plus special-link"></i> Add a new cocktail
+    <div>
+  <% end %>
 </div>
