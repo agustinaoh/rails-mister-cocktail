@@ -10,8 +10,7 @@
 
   <div>
     <% @cocktail.doses.each do |dose| %>
-        <% ingredient = Ingredient.find(dose.ingredient_id) %>
-        <p> <%= dose.description%> | <%= ingredient.name %></p>
+        <p> <%= dose.description%> | <%= dose.ingredient.name %></p>
         <%= link_to 'Delete', destroy_path(dose), method: :delete %>
     <% end %>
   </div>
