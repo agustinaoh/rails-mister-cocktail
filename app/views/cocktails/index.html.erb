@@ -1,11 +1,27 @@
-<div class="container w-50 mt-5">
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0.4)), url(<%= image_url('banner') %> );">
+  <div class="container">
+    <p>IT'S TIME FOR</p>
+    <h1>Mr. Coctail</h1>
+  </div>
+</div>
+
+
+<div class="container w-50 mt-5 text-center">
   <h1>Cocktails</h1>
-  <ul>
+  <div class="cards">
     <% @cocktails.each do |t| %>
-        <li><%= link_to t.name, cocktail_path(t) %> </li>
+      <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.squarespace-cdn.com/content/5402e23ce4b0a7034afad3a2/1606391904322-P19CDX8914JET0X3AZES/Sloe+Gin+Negroni+with+Orange+Garnish.jpg?content-type=image%2Fjpeg)">
+        <p> <%= link_to t.name, cocktail_path(t) %> </p>
+      </div>
     <% end %>
-  </ul>
-  <%= link_to new_cocktail_path do %>
-      <i class="fas fa-plus"></i> Add a new cocktail
-  <% end %>
+  </div>
+
+  <button class="btn btn-primary">
+    <%= link_to new_cocktail_path do %>
+        <i class="fas fa-plus"></i> Add a new cocktail
+    <% end %>
+  </button>
+
+  <button class="btn btn-primary"> Press me
+  </button>
 </div>

@@ -1,1 +1,26 @@
 // Specific CSS for your home-page
+
+body {
+  letter-spacing: 2px;
+  color: $dark-blue;
+  background-color: $beige;
+}
+
+.cocktail-card {
+  width: 800px;
+  background-color: white;
+
+  .cocktail-description {
+    padding: 24px;
+
+    i { font-size: 12px; }
+  }
+
+  .add-dose { bottom: 0; }
+
+  h1 { font-size: 44px; }
+
+  p { margin-bottom: 0.4rem; }
+
+  img { width: 400px; }
+}
