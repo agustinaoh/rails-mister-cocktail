@@ -7,3 +7,6 @@ rails generate model dose description cocktail:references ingredient:references
 rails g controller cocktails index show new create
 
 rails g controller doses new create
+
+
+rails destroy controller doses
