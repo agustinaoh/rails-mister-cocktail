@@ -9,6 +9,7 @@ body {
 
 .cocktail-card {
   width: 800px;
+  height: 500px;
   margin-top: 90px;
   background-color: white;
 
@@ -26,6 +27,10 @@ body {
 
   p { margin-bottom: 0.4rem; }
 
-  img { width: 400px; }
+  img {
+    width: 400px;
+    height: 500px;
+    object-fit: cover;
+  }
 
 }

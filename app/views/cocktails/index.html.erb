@@ -9,9 +9,17 @@
   <h1>Cocktails</h1>
   <div class="cards">
     <% @cocktails.each do |t| %>
-      <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.squarespace-cdn.com/content/5402e23ce4b0a7034afad3a2/1606391904322-P19CDX8914JET0X3AZES/Sloe+Gin+Negroni+with+Orange+Garnish.jpg?content-type=image%2Fjpeg)">
+
+      <% if t.photo.attached? %>
+        <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url( <%= cl_image_path t.photo.key %> )">
+          <p> <%= link_to t.name.upcase, cocktail_path(t) %> </p>
+        </div>
+      <% else %>
+        <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.squarespace-cdn.com/content/5402e23ce4b0a7034afad3a2/1606391904322-P19CDX8914JET0X3AZES/Sloe+Gin+Negroni+with+Orange+Garnish.jpg?content-type=image%2Fjpeg)">
         <p> <%= link_to t.name.upcase, cocktail_path(t) %> </p>
-      </div>
+        </div>
+      <% end %>
+
     <% end %>
   </div>
 

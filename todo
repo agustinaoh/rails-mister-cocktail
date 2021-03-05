@@ -30,3 +30,6 @@ ________
 appllication.js> import select 2
 
 document.addEventListener()
+
+
+<%= cl_image_tag t.photo.key, width: 400, height: 300, crop: :fill %>
