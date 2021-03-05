@@ -15,7 +15,9 @@ body {
   .cocktail-description {
     padding: 32px;
 
-    i { font-size: 12px; }
+    i {
+      font-size: 12px;
+    }
   }
 
   .add-dose { bottom: 8px; }
