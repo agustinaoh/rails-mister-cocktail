@@ -13,7 +13,7 @@
 <div class="container w-50 mt-5">
   <div class="cocktail-card d-flex">
     <div class="cocktail-img">
-      <img src="<%= image_url('old-fashioned.jpg')%>" alt="">
+      <img src="<%= cl_image_path @cocktail.photo.key %>" alt="">
     </div>
     <div class="cocktail-description position-relative">
       <h1 class="mb-5"><%= @cocktail.name %></h1>
