@@ -9,6 +9,7 @@ require("@rails/activestorage").start()
 require("channels")
 
 import 'bootstrap';
+import { initAos } from '../plugins/init_aos'
 
 
 // Uncomment to copy all static images under ../images to the output folder and reference
@@ -17,3 +18,8 @@ import 'bootstrap';
 //
 // const images = require.context('../images', true)
 // const imagePath = (name) => images(name, true)
+
+
+document.addEventListener( 'turbolinks:load', (e) => {
+  initAos();
+});
